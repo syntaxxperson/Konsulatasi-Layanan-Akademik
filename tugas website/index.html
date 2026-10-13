@@ -63,42 +63,103 @@
       </article>
     </section>
 
-    <!-- Section 3: Form Permohonan (Minimal 4 Field Sesuai Ketentuan) -->
+    <!-- Section 3: Form Permohonan (Menggunakan Fieldset & Legend) -->
     <section id="permohonan">
       <h2>Form Permohonan Konsultasi</h2>
       <form action="#" method="POST">
 
-        <!-- Field 1: Nama -->
+        <!-- Kelompok 1: Informasi Data Diri -->
+        <fieldset>
+          <legend>Informasi Mahasiswa</legend>
+
+          <!-- Field 1: Nama -->
+          <div>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+          </div>
+
+          <!-- Field 2: Email -->
+          <div>
+            <label for="email">Email Kampus:</label>
+            <input type="email" id="email" name="email" required placeholder="nama@student.unpatti.ac.id">
+          </div>
+        </fieldset>
+
+        <!-- Kelompok 2: Detail Permohonan Konsultasi -->
+        <fieldset>
+          <legend>Detail Layanan</legend>
+
+          <!-- Field 3: Jenis Layanan -->
+          <div>
+            <label for="jenis-layanan">Jenis Layanan:</label>
+            <select id="jenis-layanan" name="jenis_layanan" required>
+              <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
+              <option value="bimbingan">Bimbingan Skripsi / TA</option>
+              <option value="krs">Konsultasi KRS & Studi</option>
+              <option value="rekomendasi">Permohonan Surat Rekomendasi</option>
+            </select>
+          </div>
+
+          <!-- Field 4: Keperluan -->
+          <div>
+            <label for="keperluan">Keperluan / Topik Konsultasi:</label>
+            <textarea id="keperluan" name="keperluan" rows="4" required
+              placeholder="Tuliskan detail atau topik yang ingin dikonsultasikan..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Tombol Submit (Diluar fieldset agar terpisah sebagai aksi utama) -->
         <div>
-          <label for="nama">Nama Lengkap:</label>
-          <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+          <button type="submit">Kirim Permohonan</button>
         </div>
 
-        <!-- Field 2: Email -->
-        <div>
-          <label for="email">Email Kampus:</label>
-          <input type="email" id="email" name="email" required placeholder="nama@student.unpatti.ac.id">
-        </div>
+      </form>
+    </section><!-- Section 3: Form Permohonan (Menggunakan Fieldset & Legend) -->
+    <section id="permohonan">
+      <h2>Form Permohonan Konsultasi</h2>
+      <form action="#" method="POST">
 
-        <!-- Field 3: Jenis Layanan (Select/Radio) -->
-        <div>
-          <label for="jenis-layanan">Jenis Layanan:</label>
-          <select id="jenis-layanan" name="jenis_layanan" required>
-            <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
-            <option value="bimbingan">Bimbingan Skripsi / TA</option>
-            <option value="krs">Konsultasi KRS & Studi</option>
-            <option value="rekomendasi">Permohonan Surat Rekomendasi</option>
-          </select>
-        </div>
+        <!-- Kelompok 1: Informasi Data Diri -->
+        <fieldset>
+          <legend>Informasi Mahasiswa</legend>
 
-        <!-- Field 4: Keperluan (Textarea) -->
-        <div>
-          <label for="keperluan">Keperluan / Topik Konsultasi:</label>
-          <textarea id="keperluan" name="keperluan" rows="4" required
-            placeholder="Tuliskan detail atau topik yang ingin dikonsultasikan..."></textarea>
-        </div>
+          <!-- Field 1: Nama -->
+          <div>
+            <label for="nama">Nama Lengkap:</label>
+            <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+          </div>
 
-        <!-- Tombol Submit -->
+          <!-- Field 2: Email -->
+          <div>
+            <label for="email">Email Kampus:</label>
+            <input type="email" id="email" name="email" required placeholder="nama@student.unpatti.ac.id">
+          </div>
+        </fieldset>
+
+        <!-- Kelompok 2: Detail Permohonan Konsultasi -->
+        <fieldset>
+          <legend>Detail Layanan</legend>
+
+          <!-- Field 3: Jenis Layanan -->
+          <div>
+            <label for="jenis-layanan">Jenis Layanan:</label>
+            <select id="jenis-layanan" name="jenis_layanan" required>
+              <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
+              <option value="bimbingan">Bimbingan Skripsi / TA</option>
+              <option value="krs">Konsultasi KRS & Studi</option>
+              <option value="rekomendasi">Permohonan Surat Rekomendasi</option>
+            </select>
+          </div>
+
+          <!-- Field 4: Keperluan -->
+          <div>
+            <label for="keperluan">Keperluan / Topik Konsultasi:</label>
+            <textarea id="keperluan" name="keperluan" rows="4" required
+              placeholder="Tuliskan detail atau topik yang ingin dikonsultasikan..."></textarea>
+          </div>
+        </fieldset>
+
+        <!-- Tombol Submit (Diluar fieldset agar terpisah sebagai aksi utama) -->
         <div>
           <button type="submit">Kirim Permohonan</button>
         </div>
