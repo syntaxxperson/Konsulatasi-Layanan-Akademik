@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Konsultasi & Layanan Akademik Dosen</title>
+</head>
+
+<body>
+
+  <!-- Header / Identitas Portal -->
+  <header>
+    <h1>Portal Konsultasi & Layanan Akademik</h1>
+    <p>Fakultas Sains dan Teknologi - Universitas Pattimura</p>
+  </header>
+
+  <!-- Navigasi Utama -->
+  <nav>
+    <ul>
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#layanan">Layanan Konsultasi</a></li>
+      <li><a href="#permohonan">Form Permohonan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- Bagian Utama (Main) -->
+  <main>
+
+    <!-- Section 1: Intro / Informasi Singkat -->
+    <section id="beranda">
+      <h2>Selamat Datang di Portal Konsultasi Akademik</h2>
+      <p>Portal ini disediakan untuk memudahkan mahasiswa dalam mengajukan permohonan bimbingan skripsi, konsultasi KRS,
+        serta pengajuan surat rekomendasi dosen secara online dan terstruktur.</p>
+    </section>
+
+    <!-- Section 2: Tiga Kartu Layanan -->
+    <section id="layanan">
+      <h2>Layanan Konsultasi & Akademik</h2>
+
+      <!-- Kartu Layanan 1 -->
+      <article>
+        <h3>Pendaftaran Bimbingan Skripsi / TA</h3>
+        <p>Ajukan jadwal bimbingan proposal atau skripsi dengan dosen pembimbing Anda secara berkala.</p>
+        <a href="#permohonan">Ajukan Layanan</a>
+      </article>
+
+      <!-- Kartu Layanan 2 -->
+      <article>
+        <h3>Konsultasi KRS & Studi</h3>
+        <p>Diskusi terkait perencanaan studi, pengambilan SKS, dan kendala pengisian Kartu Rencana Studi.</p>
+        <a href="#permohonan">Ajukan Layanan</a>
+      </article>
+
+      <!-- Kartu Layanan 3 -->
+      <article>
+        <h3>Permohonan Surat Rekomendasi</h3>
+        <p>Pengajuan surat rekomendasi resmi dari dosen wali atau pembimbing untuk keperluan akademik maupun
+          non-akademik.</p>
+        <a href="#permohonan">Ajukan Layanan</a>
+      </article>
+    </section>
+
+    <!-- Section 3: Form Permohonan (Minimal 4 Field Sesuai Ketentuan) -->
+    <section id="permohonan">
+      <h2>Form Permohonan Konsultasi</h2>
+      <form action="#" method="POST">
+
+        <!-- Field 1: Nama -->
+        <div>
+          <label for="nama">Nama Lengkap:</label>
+          <input type="text" id="nama" name="nama" required placeholder="Masukkan nama lengkap Anda">
+        </div>
+
+        <!-- Field 2: Email -->
+        <div>
+          <label for="email">Email Kampus:</label>
+          <input type="email" id="email" name="email" required placeholder="nama@student.unpatti.ac.id">
+        </div>
+
+        <!-- Field 3: Jenis Layanan (Select/Radio) -->
+        <div>
+          <label for="jenis-layanan">Jenis Layanan:</label>
+          <select id="jenis-layanan" name="jenis_layanan" required>
+            <option value="" disabled selected>-- Pilih Jenis Layanan --</option>
+            <option value="bimbingan">Bimbingan Skripsi / TA</option>
+            <option value="krs">Konsultasi KRS & Studi</option>
+            <option value="rekomendasi">Permohonan Surat Rekomendasi</option>
+          </select>
+        </div>
+
+        <!-- Field 4: Keperluan (Textarea) -->
+        <div>
+          <label for="keperluan">Keperluan / Topik Konsultasi:</label>
+          <textarea id="keperluan" name="keperluan" rows="4" required
+            placeholder="Tuliskan detail atau topik yang ingin dikonsultasikan..."></textarea>
+        </div>
+
+        <!-- Tombol Submit -->
+        <div>
+          <button type="submit">Kirim Permohonan</button>
+        </div>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Portal Konsultasi Akademik. Hak Cipta Dilindungi.</p>
+  </footer>
+
+</body>
+
+</html>
