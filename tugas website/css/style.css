@@ -101,3 +101,172 @@ article p {
   margin-bottom: 1rem;
   color: #4b5563;
 }
+article a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+article a:hover {
+  opacity: 0.9;
+}
+
+#permohonan {
+  padding: 1.5rem 1rem;
+}
+
+#permohonan h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+form {
+  background-color: var(--white);
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+/* Fieldset (Kelompok form) */
+fieldset {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 1rem;
+  margin-bottom: 1.25rem;
+  background-color: #fafafa;
+}
+
+/* Legend (Judul kelompok form) */
+legend {
+  font-weight: bold;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Jarak antar elemen di dalam fieldset */
+fieldset div {
+  margin-bottom: 1rem;
+}
+
+fieldset div:last-child {
+  margin-bottom: 0;
+}
+
+/* Label teks form */
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+  color: var(--text-color);
+}
+
+/* Input teks, email, select dropdown, dan textarea */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background-color: var(--white);
+  color: var(--text-color);
+}
+
+/* Tombol Submit */
+button[type="submit"] {
+  width: 100%;
+  background-color: #10b981; /* Warna hijau untuk tombol aksi berhasil/kirim */
+  color: var(--white);
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+/* ==========================================
+   AKSESIBILITAS DASAR: FOCUS INDICATOR
+   (Memenuhi syarat wajib poin 6 & 8 di tugas)
+   ========================================== */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus,
+a:focus {
+  outline: 3px solid #f59e0b; /* Garis fokus warna oranye terang yang jelas */
+  outline-offset: 2px;
+}
+footer {
+  background-color: #343a40; /* Warna latar belakang gelap agar kontras */
+  color: var(--white); /* Teks berwarna putih */
+  text-align: center; /* Posisi teks di tengah */
+  padding: 1.5rem 1rem; /* Ruang jarak di dalam footer */
+  font-size: 0.85rem; /* Ukuran teks sedikit lebih kecil dan rapi */
+  margin-top: 2rem; /* Jarak pemisah dari konten di atasnya */
+}
+
+footer p {
+  opacity: 0.8; /* Sedikit pudar agar tidak terlalu mencolok */
+}
+
+/* 1. Tampilan untuk Tablet (Layar dengan lebar minimum 768px ke atas) */
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Ubah navigasi menumpuk menjadi berjajar horizontal ke samping */
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  nav li {
+    border-bottom: none;
+    border-right: 1px solid #e5e7eb;
+  }
+
+  nav li:last-child {
+    border-right: none;
+  }
+
+  nav a {
+    padding: 0.75rem 1.5rem;
+  }
+
+  /* Ubah kartu layanan menjadi Grid 2 kolom di tablet */
+  #layanan-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* 2. Tampilan untuk Desktop (Layar dengan lebar minimum 1280px ke atas) */
+@media (min-width: 1280px) {
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Ubah kartu layanan menjadi Grid 3 kolom penuh di desktop */
+  #layanan-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
