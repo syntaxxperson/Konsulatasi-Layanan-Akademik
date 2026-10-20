@@ -8,7 +8,7 @@
 }
 
 :root {
-  --primary-color: #0056b3;
+  --primary-color: #db4214;
   --secondary-color: #f4f6f9;
   --text-color: #333333;
   --white: #ffffff;
@@ -29,6 +29,12 @@ header h1 {
 header p {
   font-size: 0.875rem;
   opacity: 0.9;
+}
+
+header .logo {
+  width: 60px; /* Batasi lebar logo agar kecil dan rapi */
+  height: auto; /* Tinggi menyesuaikan secara otomatis agar tidak gepeng */
+  margin-bottom: 0.5rem; /* Jarak antara logo dan judul */
 }
 
 /* Navigasi */
@@ -63,6 +69,18 @@ nav a {
 
 nav a:hover {
   background-color: #f3f4f6;
+}
+
+#banner {
+  padding: 0; /* Hapus padding jika ingin gambarnya menempel penuh */
+  overflow: hidden;
+}
+
+#banner .banner-img {
+  width: 100%; /* Lebar memenuhi kontainer secara responsif */
+  max-height: 300px; /* Batasi tinggi maksimalnya agar tidak terlalu panjang ke bawah */
+  object-fit: cover; /* Memastikan gambar terpotong rapi tanpa gepeng */
+  border-radius: 8px; /* Membuat sudutnya sedikit melengkung */
 }
 
 /* layanan */
@@ -198,6 +216,10 @@ button[type="submit"] {
 button[type="submit"]:hover {
   opacity: 0.9;
 }
+button[type="submit"]:active {
+  background-color: #25e284;
+  transform: scale(0.98); /* Efek klik sedikit mengecil */
+}
 
 /* ==========================================
    AKSESIBILITAS DASAR: FOCUS INDICATOR
@@ -209,7 +231,6 @@ textarea:focus,
 button:focus,
 a:focus {
   outline: 3px solid #f59e0b; /* Garis fokus warna oranye terang yang jelas */
-  outline-offset: 2px;
 }
 footer {
   background-color: #343a40; /* Warna latar belakang gelap agar kontras */
