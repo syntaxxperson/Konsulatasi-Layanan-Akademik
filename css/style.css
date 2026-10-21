@@ -6,9 +6,15 @@
   margin: 0;
   padding: 0;
 }
+body {
+  background-color: #f4f6f9;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 
 :root {
-  --primary-color: #db4214;
+  --primary-color: #f19109;
   --secondary-color: #f4f6f9;
   --text-color: #333333;
   --white: #ffffff;
@@ -18,7 +24,13 @@ header {
   background-color: var(--primary-color);
   color: var(--white);
   padding: 1.5rem 1rem;
-  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Jarak antara logo dan teks */
+}
+header.logo {
+  width: 60px;
+  height: 60px;
 }
 
 header h1 {
@@ -99,39 +111,111 @@ nav a:hover {
   flex-direction: column;
   gap: 1rem; /* Jarak antar kartu */
 }
+#hero {
+  /* Menggunakan gambar 1024x576 milik Anda sebagai background */
 
-/* Desain setiap kartu individu */
-article {
-  background-color: var(--white);
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
-  padding: 1.25rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-article h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-article p {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-  color: #4b5563;
-}
-article a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  background-color: var(--primary-color);
+  background-image: url("../img/gedung-fmipa.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
   color: var(--white);
-  text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Layer transparan gelap di atas gambar agar teks terlihat kontras */
+.hero-overlay {
+  background: linear-gradient(90deg, rgba(15, 42, 70, 0.92), rgba(15, 42, 70, 0.55));
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-height: 480px;
+}
+.hero-content {
+  max-width: 650px;
+}
+
+/* Teks Utama di Hero */
+.hero-subttitle {
+  color: #ffd28a;
   font-size: 0.85rem;
   font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
 }
 
-article a:hover {
-  opacity: 0.9;
+.hero-title {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  max-width: 550px;
+}
+.btn-konsultasi {
+  display: inline-block;
+  background-color: #f19109;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.8rem 1.25rem;
+  border-radius: 5px;
+}
+.btn-konsultasi:hover {
+  background-color: #d97706;
+}
+
+/* Kontainer Kartu Mengambang di Bawah */
+.hero-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+article.hero-card {
+  background-color: rgba(255, 255, 255, 0.95); /* Putih transparan 85% */
+  color: #1f2937;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column; /* Menyusun isi ke bawah */
+  align-items: flex-start; /* Rata kiri */
+  gap: 0.75rem; /* Jarak antar elemen di dalam kartu */
+  border-radius: 6px;
+  flex: 1; /* Membagi rata 3 kolom saat di desktop */
+}
+
+article.hero-card h3 {
+  font-size: 1rem;
+  color: #163d65;
+}
+
+/* Tambahan gaya paragraf kecil opsional jika ingin diberi deskripsi */
+article.hero-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Tombol Oranye "SELENGKAPNYA" */
+.btn-selengkapnya {
+  background-color: #f19109;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.6rem 0.85rem;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+.btn-selengkapnya:hover {
+  background-color: #d97706;
 }
 
 #permohonan {
@@ -276,6 +360,18 @@ footer p {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
+  .hero-overlay {
+    padding: 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-cards {
+    flex-direction: row;
+    align-items: stretch;
+  }
 }
 
 /* 2. Tampilan untuk Desktop (Layar dengan lebar minimum 1280px ke atas) */
@@ -284,6 +380,13 @@ footer p {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+  }
+  .hero-overlay {
+    padding: 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.75rem;
   }
 
   /* Ubah kartu layanan menjadi Grid 3 kolom penuh di desktop */
